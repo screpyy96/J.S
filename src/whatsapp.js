@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const WhatsAppChat = () => {
-  const whatsappNumber = '+1234567890'; // Replace with your WhatsApp number in international format
+  const whatsappNumber = '++447930097259'; // Replace with your WhatsApp number in international format
   const preFilledMessage = 'Hello! I need assistance.'; // Replace with your pre-filled message (optional)
   const classes = useStyles();
 
