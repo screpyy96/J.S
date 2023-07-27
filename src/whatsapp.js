@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   icon: {
-    marginRight: theme.spacing(1),
+    marginRight: theme.spacing(-1.5),
   },
 }));
 
@@ -40,9 +40,7 @@ const WhatsAppChat = () => {
       className={classes.button}
       startIcon={<WhatsAppIcon className={classes.icon} />}
       onClick={handleClick}
-    >
-      Chat on WhatsApp
-    </Button>
+    />
   );
 };
 

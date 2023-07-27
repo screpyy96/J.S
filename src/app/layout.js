@@ -1,16 +1,17 @@
-import { Inter } from 'next/font/google'
+"use client"
 
-const inter = Inter({ subsets: ['latin'] })
+import theme from '@/theme'
+import { ThemeProvider } from '@material-ui/core'
 
-export const metadata = {
-  title: 'Painting and Decorating London',
-  description: 'Professionals Painters at your door!',
-}
-
+import "../app/global.css"
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <ThemeProvider theme={theme}>
+          {children}
+          </ThemeProvider>
+          </body>
     </html>
   )
 }

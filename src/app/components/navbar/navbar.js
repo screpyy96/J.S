@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useState } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -10,6 +12,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Drawer from '@material-ui/core/Drawer';
 import { makeStyles } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -19,15 +22,29 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   list: {
-    width: 250,
+    width: 200,
     display: 'flex',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column', // Set the direction to column for a vertical list on mobile
+      width: 100
+    },
+  },
+  drawer: {
+    [theme.breakpoints.down('sm')]: {
+      backgroundColor: '#f0f0f0'
     },
   },
   listItem: {
     padding: theme.spacing(1),
     textAlign: 'center', // Center the text in the list items
+    textDecoration: 'none',
+  },
+  link: {
+    textDecoration: 'none',
+    color: 'white',
+    [theme.breakpoints.down('sm')]: {
+      color: 'black'
+    }
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -45,17 +62,23 @@ const Navbar = () => {
 
   const menuItems = (
     <List className={classes.list}>
-      <ListItem button className={classes.listItem}>
-        <ListItemText primary="Home" />
-      </ListItem>
-      <ListItem button className={classes.listItem}>
-        <ListItemText primary="About" />
-      </ListItem>
-      <ListItem button className={classes.listItem}>
-        <ListItemText primary="Contact" />
-      </ListItem>
-      {/* Add more navigation items as needed */}
-    </List>
+            <Link href="/" className={classes.link}>
+              <ListItem button className={classes.listItem}>
+                <ListItemText primary="Home" />
+              </ListItem>
+            </Link>
+            <Link href="/about" className={classes.link}>
+              <ListItem button className={classes.listItem}>
+                <ListItemText primary="About" className={classes.link}/>
+              </ListItem>
+            </Link>
+            <Link href="/contact" className={classes.link}>
+              <ListItem button className={classes.listItem}>
+                <ListItemText primary="Contact" />
+              </ListItem>
+            </Link>
+            {/* Add more navigation items as needed */}
+          </List>
   );
 
   return (
@@ -77,22 +100,28 @@ const Navbar = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer}>
+            <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer} classes={{paper: classes.drawer}}>
               {menuItems}
             </Drawer>
           </>
         ) : (
           // Display the list on desktop screens
           <List className={classes.list}>
-            <ListItem button className={classes.listItem}>
-              <ListItemText primary="Home" />
-            </ListItem>
-            <ListItem button className={classes.listItem}>
-              <ListItemText primary="About" />
-            </ListItem>
-            <ListItem button className={classes.listItem}>
-              <ListItemText primary="Contact" />
-            </ListItem>
+            <Link href="/" className={classes.link}>
+              <ListItem button className={classes.listItem}>
+                <ListItemText primary="Home" />
+              </ListItem>
+            </Link>
+            <Link href="/about" className={classes.link}>
+              <ListItem button className={classes.listItem}>
+                <ListItemText primary="About" />
+              </ListItem>
+            </Link>
+            <Link href="/contact" className={classes.link}>
+              <ListItem button className={classes.listItem}>
+                <ListItemText primary="Contact" />
+              </ListItem>
+            </Link>
             {/* Add more navigation items as needed */}
           </List>
         )}
