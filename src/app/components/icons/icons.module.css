@@ -1,0 +1,30 @@
+/* styles/IconAnimation.module.css */
+.iconContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  
+  .icon {
+    font-size: 3rem;
+    color: #333; /* Customize the color as needed */
+    margin-bottom: 8px;
+  }
+  
+  .iconNumber {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .iconLabel {
+    font-size: 1.8rem;
+    color: #4caf50;
+  }
+  
+  .container { 
+    display: flex;
+    justify-content: center;
+  }
