@@ -26,7 +26,7 @@ const ProjectsPage = () => {
     },
     {
       title: 'Exterior Painting',
-      description: 'Exterior painting can give your home a fresh, updated look and increase its curb appeal. J.S Painting does the necessary prep work to make sure your exterior paint job looks great and lasts for many years to come!',
+      description: 'Our skilled painters know the best methods and type of paint to use on all types of surfaces.',
       imageUrl: '/images/exterior.jpeg',
       button: "View More"
     },

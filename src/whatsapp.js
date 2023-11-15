@@ -8,14 +8,15 @@ const useStyles = makeStyles((theme) => ({
     position: 'fixed',
     bottom: theme.spacing(2),
     right: theme.spacing(2),
+    zIndex: 99,
     backgroundColor: '#25d366', // Set your desired background color
     color: '#fff', // Set your desired text color
     '&:hover': {
       backgroundColor: '#128c7e', // Set the hover background color
     },
     [theme.breakpoints.down('sm')]: {
-      bottom: theme.spacing(8),
-      right: theme.spacing(2),
+      bottom: theme.spacing(20),
+      right: theme.spacing(6),
     },
   },
   icon: {
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const WhatsAppChat = () => {
-  const whatsappNumber = '++447930097259'; // Replace with your WhatsApp number in international format
+  const whatsappNumber = '+447930097259'; // Replace with your WhatsApp number in international format
   const preFilledMessage = 'Hello! I need assistance.'; // Replace with your pre-filled message (optional)
   const classes = useStyles();
 
