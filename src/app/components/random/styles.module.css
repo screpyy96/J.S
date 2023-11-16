@@ -57,3 +57,25 @@
 .button:hover {
   background-color: #45a049;
 }
+
+@media (max-width: 768px) {
+  .container.visible {
+    opacity: 1;
+    transform: translateY(0 );
+    height: 100%;
+    
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .firstContainer {
+    height: 100%;
+  }
+
+  .paragraph {
+    height: 100%;
+    width: 100%;
+  }
+}

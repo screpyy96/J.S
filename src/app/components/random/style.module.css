@@ -25,6 +25,8 @@
     opacity: 1;
     transform: translateX(0);
   }
+
+ 
   
   .heading {
     font-size: 1.8rem;
@@ -57,3 +59,18 @@
     background-color: #45a049;
   }
   
+  @media (max-width: 768px) {
+    .container.visible {
+      opacity: 1;
+      transform: translateY(20% );
+      
+    }
+
+    .container {
+      padding: 1rem;
+    }
+    .paragraph {
+      height: 100%;
+      width: 100%;
+    }
+  }

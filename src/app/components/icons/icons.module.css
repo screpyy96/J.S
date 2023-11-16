@@ -28,3 +28,12 @@
     display: flex;
     justify-content: center;
   }
+
+  @media (max-width: 768px) {
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 2fr;
+      transform: translateY(25%);
+      padding-bottom: 20rem;
+    }
+  }
